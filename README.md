@@ -1,5 +1,11 @@
-# StuffIRead
+This is a tiny app made to showcase my Angular skills. Used to locally record information of the entertainment works you have consumed onto a table format with 4 columns: name, progress, review, rating.<br /> 
+Its utilities may be far from being comparable to the numerous alternatives, but beginner learners of Angular could use it as an introductory reference example.<br />
+To be updated:
+- Paginator
+- Search filter bar
+- (fancy features)
 
+# StuffIRead
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.1.
 
 ## Development server
