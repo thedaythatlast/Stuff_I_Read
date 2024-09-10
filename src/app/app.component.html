@@ -1,0 +1,109 @@
+<html>
+<mat-toolbar class="barTitle">
+  <span>(local) Stuff you read/watched/consumed</span>
+</mat-toolbar>
+
+<button mat-fab extended (click)="Add()" class="Button_plus">
+ <mat-icon class="textButton_plus">+</mat-icon>
+</button>
+
+<!-- Table -->
+<div class="div-table">
+<table mat-table [dataSource]="dataSource" class="mainTable">
+
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef> Name </th>
+    <td mat-cell *matCellDef="let element; let i = index" (click)="onClick('name', i)">    <!--- *generateForm(element.name, i) -->
+    @if (Clicked[i].name)
+    {
+      <form>
+        <!-- <input name="nameCell" type="text" [(ngModel)]="dataSource[i].name"> -->
+        <textarea name="nameCell" [(ngModel)]="dataSource[i].name" rows="4"></textarea> 
+        <br>
+        <input type="button" value="OK" (click)="click_OK($event, 'name', i)">
+      </form>
+    }
+    @else
+    {
+      {{element.name}} 
+    }
+  </td>
+  </ng-container>
+
+  <ng-container matColumnDef="date">
+    <th mat-header-cell *matHeaderCellDef> Start/Finish Time </th>
+    <td mat-cell *matCellDef="let element; let i = index" (click)="onClick('date', i)"> 
+    @if (Clicked[i].date)
+    {
+      <form>
+        <textarea name="dateCell" [(ngModel)]="dataSource[i].date" rows="4"></textarea> 
+        <br>
+        <input type="button" value="OK" (click)="click_OK($event, 'date', i)">
+      </form>
+    }
+    @else
+    {
+      {{element.date}} 
+    } 
+  </td>
+  </ng-container>
+ 
+  <ng-container matColumnDef="review">
+    <th mat-header-cell *matHeaderCellDef> Review </th>
+    <td mat-cell *matCellDef="let element; let i = index" (click)="onClick('review', i)"> 
+    @if (Clicked[i].review)
+    {
+      <form>
+        <textarea name="reviewCell" [(ngModel)]="dataSource[i].review" rows="10"></textarea> 
+        <br>
+        <input type="button" value="OK" (click)="click_OK($event, 'review', i)">
+      </form>
+    }
+    @else
+    {
+      {{element.review}} 
+    } 
+  </td>
+  </ng-container>
+
+  <ng-container matColumnDef="rating">
+    <th mat-header-cell *matHeaderCellDef> Rating </th>
+    <td mat-cell *matCellDef="let element; let i = index" (click)="onClick('rating', i)"> 
+    @if (Clicked[i].rating)
+    {
+      <form>
+        <textarea name="ratingCell" [(ngModel)]="dataSource[i].rating" rows="4"></textarea> 
+        <br>  
+        <input type="button" value="OK" (click)="click_OK($event, 'rating', i)">
+      </form>
+    }
+    @else
+    {
+      {{element.rating}} 
+    } 
+  </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+</div>
+<!-- End of Table -->
+
+
+
+
+
+<mat-toolbar class="tool_bar">
+  <form class="del_checkbox">
+  <input type="checkbox" [checked]="RowDeletingMode" (change)="RowDeletingMode_toggle()">
+  Row deleting mode
+  </form>
+</mat-toolbar>
+
+<mat-toolbar class="barCredit">
+  <span>Tiny app written by Đàm Khánh Nguyên for Angular skills showcasing purpose. Go ahead to use it as a reference for your own Angular learning.</span>
+</mat-toolbar>
+
+
+</html>

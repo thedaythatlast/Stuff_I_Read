@@ -1,0 +1,81 @@
+.Button_plus {
+	position: fixed;
+	top: 0%;
+	left: 0%;
+	z-index: 1;
+	width: 5%;
+	height: 5%;
+}
+
+.div-table {
+	position: fixed;
+	top: 5%;
+	max-height: 85%;
+	overflow-y: auto; 
+	width: 100%;
+}
+
+table {
+	background-color: #e5decf;
+}
+
+.textButton_plus {
+	font-weight: bold;
+}
+
+.barTitle {
+	position: fixed;
+	justify-content: center;
+	background-color: #d9bda5;
+	height: 5%;
+}
+
+.mat-column-name {
+	border-left: 1px solid black;
+	width: 20%;
+}
+textarea {
+	width: 100%;
+	resize: vertical;
+}
+.mat-column-date {
+	border-left: 1px solid black;
+	width: 20%;
+}
+.mat-column-review {
+	border-left: 1px solid black;
+	width: 50%;
+}
+.mat-column-rating {
+	border-left: 1px solid black;
+	width: 10%;
+}
+
+td:hover {
+	background-color: teal;
+	color: white;
+}
+
+
+/* two bottom bars */
+.tool_bar {
+	position: fixed;
+	bottom: 3%;
+	height: 7%;
+	background-color: #72A0C1;
+	color: #DFF0D8;
+}
+
+.del_checkbox {
+	font-size: 70%;
+}
+
+.barCredit {
+	position: fixed;
+	bottom: 0%;
+	height: 3%;
+	font-size: 75%;
+	justify-content: center;
+	background-color: #dddddd;
+}
+
