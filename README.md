@@ -2,6 +2,8 @@ This is a tiny app made to showcase my Angular skills. Used to locally record in
 
 Its utilities may be far from being comparable to the numerous alternatives, but beginner learners of Angular could use it as an introductory reference example.
 
+Feel free to give any feedback.
+
 To be updated:
 - Paginator
 - Search filter bar
